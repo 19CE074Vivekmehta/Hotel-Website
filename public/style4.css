@@ -1,0 +1,87 @@
+
+#section2{
+    text-align: center;
+    background-image: url(images/IMG_20210414_193808\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+   
+}
+#footersection{
+    text-align: center;
+ padding:  5% 0;
+  background-color: rgb(255, 255, 255);
+}
+h3{
+    letter-spacing: 3px;
+  padding-top: 15px;
+    color:#ffffff;
+    text-align: center;
+    font-size: 2em;
+}
+.nav-link{
+    font-size: 1.05em;
+}
+.navbar-brand{
+    font-size: 2em;
+}
+.container1{
+    padding: 0 20%;
+  
+}
+.buttonrow{
+  
+    float: right;
+    margin-right: 20px;
+}
+.formback{
+    background-color: black;
+    opacity: 0.9;
+    height: 550px;
+    margin: 10% auto;
+}
+
+.social{
+    color: black;
+    font-size: 1.05em;
+   
+}
+.copyright{
+    padding: 15px 0 0 0;
+}
+@media screen  and (max-width:900px){
+    #section2{
+        text-align: center;
+        background-image: url(images/IMG_20210414_193808\ \(1\).jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 700px;
+       
+    }
+    #footersection{
+        text-align: center;
+     padding-top:  5% ;
+      background-color: rgb(255, 255, 255);
+    }
+    .formback{
+        background-color: black;
+        opacity: 0.9;
+        height: 530px;
+        margin: 20% auto;
+        width: 400px;
+    }
+    
+    h3{
+      padding-top: 20px;
+        
+        color:#ffffff;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .navbar-brand{
+        font-size: 1.5em;
+    }
+    .navbar-item{
+        text-align: left;
+    }
+}

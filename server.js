@@ -1,9 +1,7 @@
-
 const express = require('express');
 const app = express();
-app.use(express.static("public"));
 const dine_app = express();
-const port = 3030;
+const port = 3000;
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const ejs = require('ejs');
@@ -69,39 +67,49 @@ const Feedback =mongoose.model("Feedback",feedbackSchema);
 const Dine =mongoose.model("dine",dineSchema);
 
 const Room =mongoose.model("room",roomSchema);
-//Admin  Navigation
+
+
+
+
+app.use(express.static(__dirname+'/public'));
+
+
+
+
+// Navigation
 
 app.get('/admin_login', function(req, res){
 
-    res.render('loginadmin', { message: req.flash("message") })
+        res.render('loginadmin', { message: req.flash("message") })
 });
 
 app.get('/feedback_details', (req, res) => {
 
-Feedback.find({}, function(err,feedbacks){
-    res.render('viewfeedbackdetails', { 
-    feedbackList: feedbacks 
+    Feedback.find({}, function(err,feedbacks){
+        res.render('viewfeedbackdetails', { 
+        feedbackList: feedbacks 
+        })
     })
-})
 })
 
 app.get('/dine_reservation_details', (req, res) => {
 
-Dine.find({}, function(err,dines){
-    res.render('viewdinereservations', { 
-    dineList: dines 
+    Dine.find({}, function(err,dines){
+        res.render('viewdinereservations', { 
+        dineList: dines 
+        })
     })
-})
 })
 
 app.get('/room_reservation_details', (req, res) => {
 
-Room.find({}, function(err,rooms){
-    res.render('viewroomreservations', { 
-    roomList: rooms
+    Room.find({}, function(err,rooms){
+        res.render('viewroomreservations', { 
+        roomList: rooms
+        })
     })
 })
-})
+
 app.get('/', (req, res) => {
     res.sendFile(__dirname+'/public/index.html')
 })
@@ -110,16 +118,24 @@ app.get('/contact', (req, res) => {
     res.sendFile(__dirname+'/public/contact.html')
 })
 
-app.get('/feedback', (req, res) => {
-    res.sendFile(__dirname+'/public/feedback.html')
-})
-
 app.get('/menu', (req, res) => {
     res.sendFile(__dirname+'/public/menu.html')
 })
 
 app.get('/dine_reservation', (req, res) => {
-    res.sendFile(__dirname+'/public/dine_reservation.html')
+    res.sendFile(__dirname+'/public/dinereservation.html')
+})
+
+app.get('/rooms', (req, res) => {
+    res.sendFile(__dirname+'/public/rooms.html')
+})
+
+app.get('/room_reservation', (req, res) => {
+    res.sendFile(__dirname+'/public/room.html')
+})
+
+app.get('/feedback', (req, res) => {
+    res.sendFile(__dirname+'/public/feedback.html')
 })
 
 app.get('/admin_home', (req, res) => {
@@ -185,6 +201,7 @@ app.post('/login', function (req, res)
            res.redirect('/admin_login');
           } 
     })
+
 
 
 app.listen(port, () => console.info(`App listening on port ${port} `))

@@ -1,0 +1,89 @@
+#section2{
+  padding: 3% 17%;
+  text-align: center;
+  background-image: url('images/menuback.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#footersection{
+    text-align: center;
+    padding:  5% 0;
+    background-color: rgb(255, 255, 255);
+}
+h2{
+  font-family: 'Bree Serif', serif;
+    text-align: center;
+    padding: 2.5% 0;
+    font-size: 3em;
+    color: whitesmoke;
+    letter-spacing:5px;
+}
+
+h5{
+  font-size: 1.75em;
+  padding: 10px 0;
+}
+.navbar-brand{
+  font-size: 2em;
+}
+.nav-link{
+  font-size: 1.05em;
+}
+.card{
+  text-align: center;
+  margin: 10% 0;
+  border-radius: 20px;
+  height:20em;
+  background-color: wheat;
+  
+}
+.btn{
+    width: 140px;
+    padding: 15px 0;
+    cursor: pointer;
+   font-size: 1.25em;
+    color: black;
+    margin: 40px 0;
+    border-radius: 15px;
+}
+.btn:hover{
+background-color: rgb(19, 18, 18);
+color: rgb(255, 255, 255);
+}
+.social{
+  color: black;
+  font-size: 1.05em;
+ 
+}
+.copyright{
+    padding: 15px 0 0 0;
+}
+
+@media screen and (max-width:900px) {
+  h2{
+    text-align: center;
+    padding: 7% 0;
+    padding: 3% 0;
+}
+#section2{
+  padding: 3% 17%;
+  text-align: center;
+  background-image: url('images/menuback2.jpg');
+  background-repeat: no-repeat;
+ 
+}
+.navbar-brand{
+  font-size: 1.5em;
+}
+  .btn{
+    width: 150px;
+    padding: 12px 0;
+    cursor: pointer;
+    
+    color: black;
+}
+.btn:hover{
+background-color: rgb(158, 165, 158);
+color: black;
+}
+}

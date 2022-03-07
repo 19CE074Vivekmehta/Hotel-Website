@@ -1,0 +1,659 @@
+body {
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #ece6e6;
+    height: 100vh;
+}
+
+/* Global */
+
+.container {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+    min-height: 90%;
+    margin-bottom: 10px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.button_1 {
+    height: 38px;
+    background: #e8491d;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+}
+
+.dark {
+    padding: 15px;
+    background: #e6e6e6;
+    color: #a33131;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Header **/
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+}
+
+nav a, .tablinks {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+nav li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+}
+
+/* Showcase */
+
+#showcase {
+    min-height: 400px;
+    background: url('../img/showcase.jpg') no-repeat 0 -400px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#showcase h1 {
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#showcase p {
+    font-size: 20px;
+}
+
+/* nav-bar */
+
+#nav-bar {
+    color: #ffffff;
+    background: #333
+}
+
+#nav-bar h1 {
+    float: left;
+}
+
+#nav-bar form {
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+/* Boxes */
+
+#boxes {
+    margin-top: 20px;
+}
+
+#boxes .box {
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+}
+
+#boxes .box img {
+    width: 90px;
+}
+
+/* Sidebar */
+
+aside#sidebar {
+    float: left;
+    width: 30%;
+    margin-top: 10px;
+}
+
+aside#sidebar .profile label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+aside#sidebar .profile p {
+    font-size: 17px;
+}
+ .cart-price {
+     float: right;
+     color: rgb(102, 95, 95);
+     width: 20%;
+ }
+
+ .qty {
+     text-align: center;
+     float: right;
+     width: 15%;
+ }
+
+ .ctr {
+     cursor: pointer;
+ }
+
+ .ctr:hover {
+     font-weight: bold;
+ }
+
+ .cart-currency {
+     float: left;
+ }
+
+ .digit {
+     float: right;
+ }
+.food-category {
+    width: 38%;
+    padding: 3px;
+    color: #333;
+    padding-left: 8px;
+    background: #cccccc;
+    border-radius: 3px;
+    float: right;
+    overflow: hidden;
+}
+.food-category i {
+    font-size: 1.17em !important;
+    color: #333 !important;
+    padding: 3px;
+}
+.food-category:hover {
+    cursor: pointer;
+    background: #b3adad;
+}
+.food-category select {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px;
+    width: 95%;
+}
+.food-category select option {
+    width: 100%;
+    background: #b3adad;
+    padding: 3px;
+}
+.right {
+    float: right;
+}
+.item-body {
+    width: 100%;
+    display: inline-block;
+    color: #a33131;
+}
+.item-row, .item-head {
+    width: 100%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    min-height: 30px;
+    overflow: auto;
+}
+.item-head {
+    font-weight: bold;
+}
+.item-name {
+    display: block;
+    float: left;
+    width: 40%;
+}
+.item-price {
+    width: 20%;
+    float: left;
+    text-align: right;
+}
+.item-qty {
+    width: 10%;
+    float: left;
+    text-align: right;
+}
+.item-sub {
+    width: 20%;
+    float: left;
+    text-align: right;
+}
+.line {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.total {
+    font-weight: bold;
+    padding-right: 5%;
+    padding-bottom: 20px;
+}
+#add-food {
+    overflow: auto;
+}
+input[type="text"],
+textarea {
+    color: #333;
+}
+#food-image {
+    max-height: 350px;
+    width: 96%;
+    border: 1px solid #a33131;
+}
+/* Main-col */
+
+article#main-col {
+    position: relative;
+    float: right;
+    width: 65%;
+}
+
+.add-btn {
+    border-radius: 3px;
+    background-color: rgb(99, 219, 99);
+}
+.add-btn:hover {
+    cursor: pointer;
+}
+#new {
+    font-size: 30px;
+    color: #a33131;
+}
+
+.page-title > i:hover, .tablinks:hover {
+    cursor: pointer;
+}
+
+.tabs ul.active {
+    background-color: #a33131;
+}
+
+.active {
+    color: #a33131;
+}
+
+.tab-contents {
+    display: none;
+}
+
+/* foods */
+
+ul#food li {
+    min-height: 200px;
+    overflow: auto;
+    list-style: none;
+    padding: 20px;
+    border: #cccccc solid 1px;
+    margin-bottom: 5px;
+    background: #e6e6e6;
+}
+
+ ul#food input[type="button"],
+ #cart-control input[type="button"] {
+    min-width: 30px;
+    width: 20%;
+    float: right;
+    font-weight: none;
+    border-radius: 2px;
+    font-size: 14px;
+    height: 20px;
+    padding: 2px;
+}
+
+#clear {
+    background-color: #333 !important;
+}
+
+ul#food .price {
+    padding-bottom: 5px;
+    color: #a33131;
+}
+
+#no-data {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.my-food img {
+    width:30%;
+    height: 150px;
+    float: left;
+}
+
+.in-text {
+    width: 65%;
+    min-height: 150px;
+    height: auto;
+    float: right;
+}
+
+.delete {
+    background-color: #333 !important;
+    margin-left: 5px;
+}
+
+.order {
+    background-color: yellowgreen !important;
+    margin-left: 5px;
+}
+
+.big {
+    font-weight: bold;
+}
+
+#table-wrap {
+    width: 100%;
+    display: table;
+    border: 1px solid #a33131;
+}
+#table-caption {
+    display: table-caption;
+    text-align: center;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+#table-header {
+    display: table-header-group;
+    background-color: #333;
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+}
+.table-header-cell {
+    display: table-cell;
+    padding: 10px;
+    text-align: justify;
+}
+#table-body {
+    display: table-row-group;
+    background: #e6e6e6;
+    width: 100%;
+    color: #a33131;
+}
+.table-row {
+    display: table-row;
+    width: 100%;
+}
+.table-body-cell {
+    display: table-cell;
+    padding: 5px;
+    text-overflow: ellipsis;
+}
+.small-display {
+    display: none;
+}
+.cell-1 {
+    width: 5%;
+    text-align: center;
+}
+
+.cell-2 {
+    width: 15%;
+}
+
+.cell-3 {
+    width: 28%;
+}
+
+.cell-4 {
+    width: 20%;
+}
+
+.cell-5 {
+    width: 13%;
+    text-align: center;
+}
+
+.cell-6 {
+    text-align: center;
+    width: 21%;
+}
+
+.cell-11 {
+    width: 6%;
+    text-align: center;
+}
+
+.cell-12 {
+    width: 21%;
+}
+
+.cell-13 {
+    width: 32%;
+}
+
+.cell-14 {
+    width: 20%;
+}
+
+.cell-15 {
+    text-align: center;
+    width: 21%;
+}
+
+.deliver {
+    background: rgb(201, 201, 67) !important;
+}
+
+ .status,
+ .completed,
+ .waiting,
+ .declined {
+     min-width: 30px !important;
+     width: 20%;
+     float: center;
+     font-weight: none !important;
+     border-radius: 2px !important;
+     font-size: 14px !important;
+     height: 20px !important;
+     padding: 2px !important;
+     margin-bottom: 8px !important;
+ }
+
+ .completed {
+    text-align: center;
+    color: yellowgreen;
+ }
+
+ .accept,
+ .decline {
+     width: 48% !important;
+ }
+
+ .accept {
+     background: #a33131 !important;
+ }
+ .decline {
+     background: #333 !important;
+  }
+
+  .waiting,
+  .declined {
+      width: 100%;
+  }
+
+  .waiting {
+      color: blue;
+      font-style: italic;
+  }
+  .declined {
+      color: #333;
+  }
+
+  .data-display {
+      color: #333
+  }
+
+ .clickable {
+     padding: 2px;
+     padding-left: 15px;
+     padding-right: 15px;
+     background: rgb(148, 185, 219);
+     cursor: pointer;
+ }
+ .order-display {
+     display: block;
+     width: 20%;
+     float: left;
+     text-align: left;
+ }
+
+ .order-data {
+     width: 80%;
+     float: left;
+     text-align: right !important;
+     padding-left: 10%;
+ }
+
+ .order-cell {
+     width: 100% !important;
+     text-align: center;
+ }
+
+ #food-data #table-body,
+ #cart-data #table-body {
+     display: block !important;
+ }
+
+ #food-data .table-row,
+ #cart-data .table-row {
+     display: block !important;
+ }
+ .order-cell .order-display {
+     font-weight: bold;
+ }
+ #food-data label,
+ #cart-data label {
+     color: rgb(102, 95, 95)
+ }
+
+ #cart-data .order-data {
+    padding-right: 5% !important;
+ }
+
+ #upload {
+     color: wheat;
+ }
+/* Media Queries */
+
+@media(max-width: 768px) {
+    article#main-col {
+    }
+    header #branding,
+    header nav,
+    header nav li,
+    #nav-bar h1,
+    #nav-bar form,
+    #boxes .box,
+    article#main-col,
+    aside#sidebar {
+        float: none;
+        text-align: unset;
+        width: 100%;
+    }
+    .profile div {
+        text-align: left;
+    }
+    header {
+        padding-bottom: 20px;
+    }
+    .food-category{
+        margin-top: 5pX;
+        float: none;
+        width: 100%;
+    }
+    #showcase h1 {
+        margin-top: 40px;
+    }
+    #nav-bar button,
+    .profile button {
+        display: block;
+        width: 100%;
+    }
+    input[type="file"],
+    textarea {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .table-row {
+        padding-bottom: 8px
+    }
+    .cell-1, .cell-11,
+    .cell-2, .cell-12,
+    .cell-3, .cell-13,
+    .cell-4, .cell-14,
+    .cell-5, .cell-15,
+    .cell-6 {
+        width: 100%;
+    }
+
+    .table-body-cell {
+        padding: 0%;
+        display: block;
+        border-bottom: 1px solid #a33131;
+    }
+    .small-display{
+        display: block;
+        width: 30%;
+        float: left;
+        text-align: right;
+    }
+    .data {
+        width: 70%;
+        float: left;
+        text-align: left !important;
+        padding-left: 10%;
+    }
+    #table-header {
+        display: none;
+    }
+}
+
+@media(max-width: 500px) {
+    .my-food img {
+        width: 100%;
+        height: 150px;
+        float: none;
+    }
+    .in-text {
+        text-align: left;
+        width: 100%;
+        min-height: 150px;
+        height: auto;
+        float: none;
+    }
+    .order-display {
+        width: 30%;
+    }
+    .order-data {
+        width: 70%;
+    }
+}

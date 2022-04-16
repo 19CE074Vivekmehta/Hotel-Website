@@ -40,6 +40,7 @@ const feedbackSchema= {
 }
 
 const dineSchema= {
+    tableno:Number,
     f_name: String,
     l_name: String,
     contact: Number,
@@ -58,8 +59,10 @@ const roomSchema= {
     adultperson: Number,
     children: String,
     reserved:Number,
-    available:Number
-
+    status:String,
+    availableRooms:[{
+        type: Number
+    }]
 
 }
 const PunjabimenuSchema= {
@@ -88,14 +91,85 @@ app.get('/admin_login', function(req, res){
 });
 
 app.get('/rooms', (req, res) => {
-    res.render('roomsuser');
+    Room.find({}, function(err,rooms){
+        res.render('roomsuser', { 
+            roomList: rooms
+        });
+    });
 })
+
+app.get('/dine_reservation', (req, res) => {
+    Dine.find({}, function(err,dines){
+        res.render('tableuser', { 
+            dineList: dines
+        });
+    });
+})
+
+app.get('/roominfo', (req, res) => {
+    var id =  req.query.id;
+    console.log("id is "+id);
+    Room.find({}, function(err,rooms){
+        res.render('Roominformation', { 
+        roomList: rooms,
+        fetch_id : id,
+        // Room_No: 1
+        })
+    })
+   
+});
+app.get('/dine_reservation_details', (req, res) => {
+
+    Dine.find({}, function(err,dines){
+        res.render('tables', { 
+        dineList: dines 
+        })
+    })
+})
+
+app.get('/tableinfo', (req, res) => {
+    var id =  req.query.id;
+    console.log("id is "+id);
+    Dine.find({}, function(err,dines){
+        res.render('tableinformation', { 
+        dineList: dines,
+        fetch_id : id,
+        // Room_No: 1
+        })
+    })
+   
+});
+// var array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,
+// 25,26,27,28,29,30];
+// var arr=[];
+// array.forEach(function(item) {
+//     arr.push(item);
+// });
+// arr.forEach(function(item) {
+//     console.log("-->" + item);
+// });
 
 app.get('/AdminRooms', function(req, res){
 
     Room.find({}, function(err,rooms){
         res.render('rooms', { 
-        roomList: rooms
+        roomList: rooms,
+        // availablerooms :arr
+        // Room_No: 156
+        })
+    })
+});
+
+
+app.get('/showname', function(req, res){
+    var name =  req.query.name;
+    console.log("name is "+name);
+    Room.find({}, function(err,rooms){
+        res.render('showguest', { 
+        roomList: rooms,
+        // availablerooms :arr
+        // Room_No: 156
+        fetch_name:name
         })
     })
 });
@@ -113,15 +187,6 @@ app.get('/menu', (req, res) => {
     
 })
 
-
-app.get('/dine_reservation_details', (req, res) => {
-
-    Dine.find({}, function(err,dines){
-        res.render('viewdinereservations', { 
-        dineList: dines 
-        })
-    })
-})
 
 app.get('/room_reservation_details', (req, res) => {
 
@@ -141,9 +206,9 @@ app.get('/contact', (req, res) => {
 })
 
 
-app.get('/dine_reservation', (req, res) => {
-    res.sendFile(__dirname+'/public/dinereservation.html')
-})
+// app.get('/dine_reservation', (req, res) => {
+//     res.sendFile(__dirname+'/public/dinereservation.html')
+// })
 
 
 
@@ -151,6 +216,10 @@ app.get('/room_reservation', (req, res) => {
     res.sendFile(__dirname+'/public/room.html')
 })
 
+
+// app.get('/roominfo', (req, res) => {
+//     res.sendFile(__dirname+'/public/random.html')
+// })
 app.get('/feedback', (req, res) => {
     res.sendFile(__dirname+'/public/feedback.html')
 })
@@ -179,6 +248,7 @@ app.post("/",function(req,res){
 
 app.post("/top",function(req,res){
     let newDine = new Dine({
+        tableno: req .body.tableno,
         f_name: req .body.firstname,
         l_name: req.body.lastname,
         contact: req.body.contact,
@@ -199,9 +269,22 @@ app.post("/r_submit",function(req,res){
         checkin: req.body.checkin,
         checkout: req.body.checkout,
         adultperson: req.body.adultperson,
-        children: req.body.children
+        children: req.body.children,
+        status : "available"
 
     });
+    // newRoom.findOne({ room_no : req.body.room_no, })
+    // .then(
+    //     (room) => {
+    //         room_no : room.room_no},{
+    //         name: room.name},{
+    //         email: room.email},{
+    //         checkin: room.checkin},{
+    //         checkout: room.checkout},{
+    //         adultperson: room.adultperson},{
+    //         children: room.children}
+    //     );
+    
     newRoom.save();
     res.redirect('/');
 })

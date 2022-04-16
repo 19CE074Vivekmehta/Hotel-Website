@@ -36,20 +36,20 @@
     </div>
   </div>
   
-  <h1 style="color: #03122B;">All Rooms</h1>
+  <h1 style="color: #03122B;">All Tables</h1>
   <!-- logic starts here -->
     <!-- logic ends here -->
   <div class="row">
       <div class="col-md-12" id="rooms-div">
         <%var arraylist = [];%> 
-        <%roomList.forEach(room =>{%>
-        <%arraylist.push(room.room_no);%>
+        <%dineList.forEach(dine =>{%>
+        <%arraylist.push(dine.tableno);%>
         <%});%>
 
 
 <!-- whatever data we have in roomList we are copying it in another arraylist and then comparing each element of arrayList in roomList -->
-<%const uniqueValues = new Set(roomList.map(v => v.room_no));%>
-<%if (uniqueValues.size < roomList.length) {%>
+<%const uniqueValues = new Set(dineList.map(v => v.tableno));%>
+<%if (uniqueValues.size < dineList.length) {%>
 <!-- <%console.log('duplicates found')%> -->
 <%}%>
 <%const uniqueRoom_no = Array.from(new Set(arraylist));%>
@@ -57,37 +57,30 @@
 
 <%let newArray = [];%>
 <%let uniqueObject = {};%>
-<%for (let i in roomList) {%>
-<%objrno = roomList[i]['room_no'];%>
-<%uniqueObject[objrno] = roomList[i];%>
+<%for (let i in dineList) {%>
+<%objrno = dineList[i]['tableno'];%>
+<%uniqueObject[objrno] = dineList[i];%>
 <%}%>
 <%for (i in uniqueObject) {%>
 <%newArray.push(uniqueObject[i]);%>
 <%}%>
-<% console.log("rooms.ejs page");%>
+<% console.log("tables.ejs page");%>
 
 
-      <%newArray.forEach(room =>{%>
-          <a href="/roominfo?id=<%=room.room_no%>" id="<%=room.room_no%>">
-          <%if((room.checkin < new Date() && room.checkout < new Date())){%>
-            <div class="room-available"><%=room.room_no%></div> 
-            <% room.status ="Available";%>
+      <%newArray.forEach(dine =>{%>
+          <a href="/tableinfo?id=<%=dine.tableno%>" id="<%=dine.tableno%>">
+            <%if(dine.datereserve.getDate() == new Date().getDate() || dine.datereserve.getHours() > new Date().getHours()){%> <!--checkin already done and checkout after today-->
+                <div class="room-occupied"><%=dine.tableno%></div> 
+              <%}else if(dine.datereserve <= new Date() && dine.datereserve.getHours() <= new Date().getHours()){%>
+            <div class="room-available"><%=dine.tableno%></div> 
+                 
+            <%}else if(dine.datereserve > new Date()){%>
+            <div class="room-reserved"><%=dine.tableno%></div> 
+          
            
-            <%}else if(room.checkin <= new Date() && room.checkout >= new Date()){%> <!--checkin already done and checkout after today-->
-              <div class="room-occupied"><%=room.room_no%></div> 
-              <%room.checkin=room.checkin;%>
-              <%room.checkout=room.checkout;%>
-              <%room.status ="Occupied";%>
-              
-    
-            <%}else if((room.checkin > new Date() && room.checkout > new Date())){%>
-            <div class="room-reserved"><%=room.room_no%></div> 
-            <%room.checkin=room.checkin;%>
-            <%room.checkout=room.checkout;%>
-            <% room.status ="Reserved";%>
-      
-           
-            <%} %>
+            <%}else{ %>
+                <div class="room-occupied"><%=dine.tableno%></div> 
+            <%}%>
           </a>
          <%})%>
            

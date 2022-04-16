@@ -66,8 +66,33 @@
                         <div class="form-row">
                             <div class="form-group col-md-6 text-left">
                                 <label for="tableno" class="labels">Table Number</label>
-                                <input type="number" class="form-control" id="tableno" placeholder="table number" name="tableno" required>
+                                <!-- <input type="number" class="form-control" id="tableno" placeholder="table number" name="tableno" required> -->
+                           <br>
+                                <select  class="custom-select mt-2 mb-2 mr-sm-2 mb-sm-0" id="tableno" name="tableno" required>
+                                    <option value="" disabled selected hidden>Choose a table</option>
+                                                  
+        <%let Array = [];%>
+        <%let uniObj = {};%>
+        <%for (let i in dineList) {%>
+        <%objrno = dineList[i]['tableno'];%>
+        <%uniObj[objrno] = dineList[i];%>
+        <%}%>
+        <%for (i in uniObj) {%>
+        <%Array.push(uniObj[i]);%>
+        <%}%>
+        
+        <%console.log("tableuser page");%>
+        <!-- <%console.log("data" + Array);%> -->
+                                    <%Array.forEach(dine =>{%>           
+                                      <%if((dine.datereserve.getDate()  < new Date().getDate() ) && (dine.datereserve.getHours() < new Date().getHours())){%>
+                                          <option value=" <%=dine.tableno%>"><%=dine.tableno%></option>
+                                      <%}%>
+                                      <%})%>
+                          
+                                  </select>
+                                  <p class="validate" id="room-validate" style="display:none;">Please select a table number.</p>              
                             </div>
+                           
                             <div class="form-group col-md-6 text-left">
                                 <label for="inputfirstname" class="labels">First name</label>
                                 <input type="text" class="form-control" id="inputfirstname" placeholder="firstname" name="firstname" required>

@@ -56,7 +56,31 @@
             <form  method="post" action="/">
                 <div class="form-row">
                     <div class="col-md-2">
-                        <input type="number" class="form-control my-2" placeholder="room_no" name="room_no" required>
+                        <!-- <input type="number" class="form-control my-2" placeholder="room_no" name="room_no" required> -->
+                   
+                        <select class="custom-select mt-2 mb-2 mr-sm-2 mb-sm-0" id="room" name="room_no" required>
+                            <option value="" disabled selected hidden>Choose a room</option>
+                                          
+<%let newArray = [];%>
+<%let uniqueObject = {};%>
+<%for (let i in roomList) {%>
+<%objrno = roomList[i]['room_no'];%>
+<%uniqueObject[objrno] = roomList[i];%>
+<%}%>
+<%for (i in uniqueObject) {%>
+<%newArray.push(uniqueObject[i]);%>
+<%}%>
+
+<%console.log("roomsuser page");%>
+<!-- <%console.log(newArray);%> -->
+                            <%newArray.forEach(room =>{%>           
+                              <%if((room.checkin < new Date() && room.checkout < new Date())){%>
+                                  <option value=" <%=room.room_no%>"><%=room.room_no%></option>
+                              <%}%>
+                              <%})%>
+                  
+                          </select>
+                          <p class="validate" id="room-validate" style="display:none;">Please select a room number.</p>              
                     </div>
                     <div class="col-md-2">
                         <input type="text" class="form-control my-2" placeholder="Name" name="name" required>
@@ -89,22 +113,22 @@
             <div class="col-lg-3 col-md-3">
                 <i class="fa fa-money my-1" style="font-size: 2em;" aria-hidden="true"></i>
                 <h5>Best Price Guaranteed.</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>Just ₹ 1500 per night stay.</p>
             </div>
             <div class="col-lg-3 col-md-3">
                 <i class="fa fa-lock my-1" style="font-size: 2em;" aria-hidden="true"></i>
                 <h5>Safe and Secure</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </p>
+                <p>24/7 security available.</p>
             </div>
             <div class="col-lg-3 col-md-3">
                 <i class="fa fa-check my-1" style="font-size: 2em;" aria-hidden="true"></i>
                 <h5>Quality service</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </p>
+                <p>Trained waiters and 24/7 available.</p>
             </div>
             <div class="col-lg-3 col-md-3">
                 <i class="fa fa-user my-1" style="font-size: 2em;" aria-hidden="true"></i>
                 <h5>24/7 Helpdesk</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>Always at your service.</p>
             </div>
         </div>
     </section>

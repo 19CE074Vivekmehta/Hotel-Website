@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style2.css">
+    <title>Menu</title>
+</head>
+
+<body>
+  <section id="section1">
+    <nav class="navbar navbar-expand-lg navbar-dark py-3 bg-dark">
+        <a class="navbar-brand" href="/"><img src="images/logo.png" alt="" height="60" width="175"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link mx-3" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-3" href="/menu">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-3" href="/dine_reservation">Reservation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-3" href="/contact">Reach us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link mx-3" href="/feedback">Feedback</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</section>
+  <section id='section2'>
+    <H1 class="text-center mt-5" style="color: azure;">MENU</H1>
+
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+        <div class="box-wrap">
+        <div class="box">
+            <img src="images/1.jpg" alt="punjabi" class="img-thumbnail">
+            <h3>Punjabi</h3>
+        </div>
+        <div class="box">
+            <img src="images/2.jpg" alt="gujarati" class="img-thumbnail">
+            <h3>Gujarati</h3>
+        </div>
+        <div class="box">
+            <img src="images/3.jpg" alt="mexican" class="img-thumbnail">
+            <h3>Mexican</h3>
+        </div>
+    </div>
+    <div class="box-wrap ">
+        <div class="menu1">
+            <button type="button"  class="btn btn-dark" data-toggle="modal" data-target=".bd-example-modal-lg" >Show Menu</button>
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <table class="table table-hover table-dark">
+                        <thead>
+                          <tr>
+                            <th scope="col">item number</th>
+                            <th scope="col">name</th>
+                            <th scope="col">price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- <%PMList.forEach(feedback =>{%>
+                          <tr>
+                            <th scope="row"><%=PMList.item_no%></th>
+                            <td><%=PMList.item_name%></td>
+                            <td><%=PMList.price%>/-</td>
+                            <td><a href="#" style="color:white;">ADD + </a></td>
+                            <td style="width: 0.33%"><button type="button" class="btn btn-sm btn-secondary py-0">ADD + </button></td> -->
+                          <!-- </tr> -->
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Shaahi Paneer</td>
+                            <td>150/-</td>
+                             <td><a href="#" style="color:white;">ADD + </a></td>
+                            </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Karahi Paneer</td>
+                            <td>175/-</td>
+                             <td><a href="#" style="color:white;">ADD + </a></td>
+                            </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Pudina Paneer</td>
+                            <td>140/-</td>
+                            <td><a href="#" style="color:white;">ADD + </a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Paneer Tikka Masala</td>
+                            <td>170/-</td>
+                            <td><a href="#" style="color:white;">ADD + </a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Navratan Korma</td>
+                            <td>185/-</td>
+                            <td><a href="#" style="color:white;">ADD + </a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>Paneer Butter Masala</td>
+                            <td>200/-</td>
+                            <td><a href="#" style="color:white;">ADD + </a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td>Paneer Bhurji</td>
+                            <td>275/-</td>
+                            <td><a href="#" style="color:white;">ADD + </a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">8</th>
+                            <td>Paneer Lababdar</td>
+                            <td>250/-</td>
+                            <td><a href="#" style="color:white;">ADD + </a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">9</th>
+                            <td>Paneer Jwalamuki</td>
+                            <td>255/-</td>
+                            <td><a href="#" style="color:white;">ADD + </a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">10</th>
+                            <td>Paneer Do Pyaza<strong>(Spicy)</strong></td>
+                            <td>240/-</td>
+                            <td><a href="#" style="color:white;">ADD + </a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">11</th>
+                            <td>Paneer Toofani</td>
+                            <td>250/-</td>
+                            <td><a href="#" style="color:white;">ADD + </a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">12</th>
+                            <td>Paneer Pasanda</td>
+                            <td>200/-</td>
+                            <td><a href="#" style="color:white;">ADD + </a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">13</th>
+                            <td>Paneer Kolhapuri<strong>(Spicy)</strong></td>
+                            <td>230/-</td>
+                            <td><a href="#" style="color:white;">ADD + </a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">14</th>
+                            <td>Paneer Chatpata<strong>(Spicy)</strong></td>
+                            <td>225/-</td>
+                            <td><a href="#" style="color:white;">ADD + </a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="menu2">
+            <button type="button" class="btn btn-dark" data-toggle="modal" data-target=".gujarati">Show Menu</button>
+            <div class="modal fade gujarati" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <table class="table table-hover table-dark">
+                        <thead>
+                          <tr>
+                            <th scope="col">item number</th>
+                            <th scope="col">name</th>
+                            <th scope="col">price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Sev Tomata</td>
+                            <td>100/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Lasaniya Bataka</td>
+                            <td>130/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Rajwadi Dholki</td>
+                            <td>100/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Bhindi Masala</td>
+                            <td>140/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Dahi Tikhari</td>
+                            <td>75/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>Kathol</td>
+                            <td>90/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td>item-7</td>
+                            <td>275/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">8</th>
+                            <td>Sev Lasaniya</td>
+                            <td>150/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">9</th>
+                            <td>Bharela Shimla</td>
+                            <td>155/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">10</th>
+                            <td>Bharela Ringan</td>
+                            <td>155/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">11</th>
+                            <td>Kaju Lasaniya</td>
+                            <td>200/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">12</th>
+                            <td>Bharela Papad</td>
+                            <td>100/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">13</th>
+                            <td>Sadi Khichadi Kadi</td>
+                            <td>150/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">14</th>
+                            <td>Masala Khichadi Kadi</td>
+                            <td>195/-</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+              </div>
+            </div>        </div>
+        <div class="menu3">
+            <button type="button" class="btn btn-dark" data-toggle="modal" data-target=".mexican">Show Menu</button>
+            <div class="modal fade mexican" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <table class="table table-hover table-dark">
+                        <thead>
+                          <tr>
+                            <th scope="col">item number</th>
+                            <th scope="col">name</th>
+                            <th scope="col">price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Chipotle Nachos</td>
+                            <td>250/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Enchiladas</td>
+                            <td>300/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Burrito Bowl</td>
+                            <td>270/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Quesadillas</td>
+                            <td>250/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Chipotle Quesadilla</td>
+                            <td>275/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>Hot Pot Mexico Rice</td>
+                            <td>350/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td>Chipotle Burrito Bowl</td>
+                            <td>400-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">8</th>
+                            <td>Chipotle Rice Bowl</td>
+                            <td>250/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">9</th>
+                            <td>item-9</td>
+                            <td>175/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">10</th>
+                            <td>Tofu Rice Bowl</td>
+                            <td>375/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">11</th>
+                            <td>item-11</td>
+                            <td>250/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">12</th>
+                            <td>Mexican Rice</td>
+                            <td>250/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">13</th>
+                            <td>Tacos</td>
+                            <td>150/-</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+              </div>
+            </div>        </div>
+    </div>
+    
+    <div class="box-wrap">
+        <div class="box">
+            <img src="images/4.jpg" alt="italian" class="img-thumbnail">
+            <h3>Italian</h3>
+        </div>
+        <div class="box">
+            <img src="images/5.jpg" alt="rajastani" class="img-thumbnail">
+            <h3>Rajastani</h3>
+        </div>
+        <div class="box">
+            <img src="images/6.jpg" alt="chinese" class="img-thumbnail">
+            <h3>Chinese</h3>
+        </div>
+    </div>
+    <div class="box-wrap ">
+        <div class="menu1">
+            <button type="button" class="btn btn-dark" data-toggle="modal" data-target=".italian">Show Menu</button>
+            <div class="modal fade italian" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <table class="table table-hover table-dark">
+                        <thead>
+                          <tr>
+                            <th scope="col">item number</th>
+                            <th scope="col">name</th>
+                            <th scope="col">price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Ace of Base Pizza</td>
+                            <td>250/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Paneer Exotica Pizza</td>
+                            <td>300/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Spicy Paper Pizza</td>
+                            <td>350/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Mexico Beans Pizza</td>
+                            <td>350/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Italian Treat Pizza</td>
+                            <td>325/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td> Piri-Piri Pizza</td>
+                            <td>350/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td>Supreme Garlic Bread</td>
+                            <td>225/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">8</th>
+                            <td>American Garlic Bread</td>
+                            <td>150/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">9</th>
+                            <td>Arrabiata Red Sauce Pasta</td>
+                            <td>175/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">10</th>
+                            <td>Zesty Cheese Garlic Pasta</td>
+                            <td>275/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">11</th>
+                            <td>Pesto Pasta</td>
+                            <td>200/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">12</th>
+                            <td>Red Sauce Spaghetti</td>
+                            <td>250/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">13</th>
+                            <td>Pesto Spaghetti</td>
+                            <td>330/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">14</th>
+                            <td>Spaghetti Aglio E Olio</td>
+                            <td>275/-</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+              </div>
+            </div>        </div>
+        <div class="menu2">
+            <button type="button" class="btn btn-dark" data-toggle="modal" data-target=".rajasthani">Show Menu</button>
+            <div class="modal fade rajasthani" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <table class="table table-hover table-dark">
+                        <thead>
+                          <tr>
+                            <th scope="col">item number</th>
+                            <th scope="col">name</th>
+                            <th scope="col">price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Sadi Bati</td>
+                            <td>10/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Bati with Ghee</td>
+                            <td>15/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Churma Bati</td>
+                            <td>30/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Dal Tadka</td>
+                            <td>100/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Dal Khatti Mithi</td>
+                            <td>125/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>Dal Bati Choorma and Rajasthani Gatte ki Sabzi</td>
+                            <td>250/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td>Gatte Ki Sabzi With Rajasthani Paratha / Tawa Roti</td>
+                            <td>275/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">8</th>
+                            <td>Dal Bati Choorma</td>
+                            <td>150/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">9</th>
+                            <td>Special Gatta Kadhi</td>
+                            <td>175/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">10</th>
+                            <td>Sp. Rajasthani Gatta Pulao</td>
+                            <td>275/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">11</th>
+                            <td>Special Dry Fruit Choorma</td>
+                            <td>70/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">12</th>
+                            <td>Bhindi Masala</td>
+                            <td>150/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">13</th>
+                            <td>Special Rajwadi Masala Chaach</td>
+                            <td>30/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">14</th>
+                            <td>Special Bhuna Jeera Pudina Chaach</td>
+                            <td>50/-</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+              </div>
+            </div>        </div>
+        <div class="menu3">
+            <button type="button" class="btn btn-dark" data-toggle="modal" data-target=".chinese">Show Menu</button>
+            <div class="modal fade chinese" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <table class="table table-hover table-dark">
+                        <thead>
+                          <tr>
+                            <th scope="col">item number</th>
+                            <th scope="col">name</th>
+                            <th scope="col">price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Dry Manchurian</td>
+                            <td>150/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Manchurian Pop Shot</td>
+                            <td>170/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Veggie Schezwan Stick</td>
+                            <td>240/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Veg 65</td>
+                            <td>190/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Veg Crispy</td>
+                            <td>195/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>Veg Lollipop</td>
+                            <td>250/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td>Paneer Chilli Dry</td>
+                            <td>275/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">8</th>
+                            <td>Paneer Mangolian</td>
+                            <td>200/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">9</th>
+                            <td>Paneer 65</td>
+                            <td>200/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">10</th>
+                            <td>Dragon Potato</td>
+                            <td>175/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">11</th>
+                            <td>Manchurian Gravy</td>
+                            <td>200/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">12</th>
+                            <td>item-12</td>
+                            <td>150/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">13</th>
+                            <td>Chilli Garlic Mushroom</td>
+                            <td>190/-</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">14</th>
+                            <td>Paneer Chilli Gravy</td>
+                            <td>205/-</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+              </div>
+            </div>        </div>
+    </div>
+
+  </section>
+
+    <section id="footersection">
+        <div class="container-fluid">
+            <a href="" class="mx-3  social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="" class="mx-3  social"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="" class="mx-3  social"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            <div class="copyright">
+                <p>Copyright@2021 Hotel Rajasthan Garden</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="index.js"> </script>
+</body>
+
+</html>
+<!-- 
+<%feedbackList.forEach(feedback =>{%>
+    <p><%=feedback.f_name%></p>
+<%})%> -->

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- <div class="row">
+    <div class="col-md-12">
+      <form id="search-form">
+        <label for="name">Search For Guest:</label>
+        <div class="input-group">
+          <input class="form-control" type="text" id="name" name="name">
+          <span class="input-group-btn">
+            <button class="btn btn-default" id="search-btn" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span><a href="/showname?name=" id="name">Search</a> </button>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div> -->
+  <div class="row">
+    <div class="col-md-12">
+      <div id="search-rooms"></div>
+    </div>
+  </div>
+  
+  <h1 style="color: #03122B;">All Rooms</h1>
+  <!-- logic starts here -->
+    <!-- logic ends here -->
+  <div class="row">
+      <div class="col-md-12" id="rooms-div">
+        <%var arraylist = [];%> 
+        <%roomList.forEach(room =>{%>
+        <%arraylist.push(room.room_no);%>
+        <%});%>
+
+
+<!-- whatever data we have in roomList we are copying it in another arraylist and then comparing each element of arrayList in roomList -->
+<%const uniqueValues = new Set(roomList.map(v => v.room_no));%>
+<%if (uniqueValues.size < roomList.length) {%>
+<!-- <%console.log('duplicates found')%> -->
+<%}%>
+<%const uniqueRoom_no = Array.from(new Set(arraylist));%>
+
+
+<%let newArray = [];%>
+<%let uniqueObject = {};%>
+<%for (let i in roomList) {%>
+<%objrno = roomList[i]['room_no'];%>
+<%uniqueObject[objrno] = roomList[i];%>
+<%}%>
+<%for (i in uniqueObject) {%>
+<%newArray.push(uniqueObject[i]);%>
+<%}%>
+<% console.log("rooms.ejs page");%>
+
+
+      <%newArray.forEach(room =>{%>
+          <a href="/roominfo?id=<%=room.room_no%>" id="<%=room.room_no%>">
+          <%if((room.checkin < new Date() && room.checkout < new Date())){%>
+            <div class="room-available"><%=room.room_no%></div> 
+            <% room.status ="Available";%>
+           
+            <%}else if(room.checkin <= new Date() && room.checkout >= new Date()){%> <!--checkin already done and checkout after today-->
+              <div class="room-occupied"><%=room.room_no%></div> 
+              <%room.checkin=room.checkin;%>
+              <%room.checkout=room.checkout;%>
+              <%room.status ="Occupied";%>
+              
+    
+            <%}else if((room.checkin > new Date() && room.checkout > new Date())){%>
+            <div class="room-reserved"><%=room.room_no%></div> 
+            <%room.checkin=room.checkin;%>
+            <%room.checkout=room.checkout;%>
+            <% room.status ="Reserved";%>
+      
+           
+            <%} %>
+          </a>
+         <%})%>
+           
+    
+     <!-- if user's checkin date <= today's date <= user's checkout date  then allocated  -->
+     <!-- else reserved -->
+     <!-- <div class="room-reserved">R</div> -->
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+          <div class="sm-room-available"></div>
+          <p>Available</p>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+          <div class="sm-room-occupied"></div>
+          <p>Occupied</p>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="sm-room-reserved"></div>
+      <p>Reserved</p>
+    </div>
+  </div>
+  <!-- <a href="/admin/menu"><button type="back" class="btn btn-default">Manager Menu</button></a></p>
+  <div class="row" style="padding-bottom:20px;"></div> -->
+</body>
+  <script>
+    // $("#search-btn").on("click", function() {
+    //     });
+  </script>
+  

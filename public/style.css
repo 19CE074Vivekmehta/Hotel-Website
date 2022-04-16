@@ -277,6 +277,68 @@ p{
     
 }
 
+.room-available,
+.room-occupied,
+.room-reserved {
+	text-align: center;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.room-available {
+	background-color: green;
+}
+
+.room-occupied {
+	background-color: red;
+}
+
+.room-reserved {
+	background-color: blue;
+}
+
+.sm-room-available,
+.sm-room-occupied,
+.sm-room-reserved {
+	width: 20px;
+	height: 20px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	float: left;
+}
+
+.sm-room-available {
+	background-color: green;
+}
+
+.sm-room-occupied {
+	background-color: red;
+}
+
+.sm-room-reserved {
+	background-color: blue;
+}
+
+.available {
+	color: green;
+}
+
+.reserved {
+	color: blue;
+}
+
+.occupied {
+	color: red;
+}
+
+
 @media  screen and (max-width:900px) {
     h2{
         margin: 25% 0;

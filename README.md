@@ -1,6 +1,32 @@
 # Hotel-Website
 Technology used : bootstrap, nodejs, express, mongodb. It is a website where client can book table online , order food online,book a room and give feedback and admin can manage status of room, table and can view feedbacks.
+# Server Installation Guide
 
+## Install Node.js
+
+Go to https://nodejs.org and install v7.0.0 for your operating system.
+
+## Install MongoDB
+
+Go to https://www.mongodb.com/download-center?jmp=hero#community and install v3.2.10 for your operating system. Windows 7 64 bit or later users should install the file for Windows Server 2008 R2 64 bit and later, with SSL support.
+
+## Clone this repository
+
+Make a git folder somewhere on your computer and clone this repository over to it. There are many ways to do this. I installed GitBash, but there are some GUI clients that will work as well.
+
+Check out this Git/GitHub [tutorial](https://www.youtube.com/watch?v=vR-y_2zWrIE&index=1&list=PLWKjhJtqVAbkFiqHnNaxpOPhh9tSWMXIF).
+
+## Install Dependencies
+
+Once you have cloned the repository, you should have a hotel-reservation-project folder somewhere. Navigate to this folder via the command line. For example, if your folder is located here C:\git\hotel-reservation-project, you could type cd C:\git\hotel-reservation-project to get there. Alternively, Windows users could navigate via the file explorer to the folder, shift-right-click on it, and select open command window here.
+
+Once you're there enter <b>npm install</b> to get all of the dependencies.
+
+## Start Nodejs Server
+___
+NOTE: Before starting the server, make sure <b>mongod</b> is running in the background. Navigate to the mongo installation directory and run mongod.exe. 
+___
+To start the server, enter <b>node server</b> into the command window while in the project directory. It should say Server running on port 3000. If you visit localhost:3000 from your browser and the site comes up, everything is good to go. Terminate the command to stop the server.
 ### Table of Contents 
 
 1. [About](#about)
